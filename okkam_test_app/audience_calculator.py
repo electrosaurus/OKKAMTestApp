@@ -69,7 +69,7 @@ class AudienceCalculator:
         * `date`
         * `id` — respondent's ID
         * `age` — respondent's age
-        * `sex` — responden's sex (1 — male, 2 — female)
+        * `sex` — respondent's sex (1 — male, 2 — female)
 
         Returns
         -------
@@ -82,7 +82,7 @@ class AudienceCalculator:
             If audience 1 is empty or has zero weight.
 
         Usage example
-        -------
+        -------------
         >>> audience_calculator.calc_inclusion_percent(
         ...     'age BETWEEN 18 AND 35',
         ...     'age > 25 AND sex = 2',

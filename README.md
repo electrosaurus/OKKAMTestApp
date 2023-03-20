@@ -15,7 +15,7 @@ $ docker-compose up
 ## API usage
 
 ```console
-$ curl -X GET localhost/getPercent -d '{"audience1": "age BETWEEN 20 and 40", "audience2": "age > 30 AND sex = 2"}'
+$ curl -X GET "localhost/getPercent?audience1=age%20BETWEEN%2020%20and%2040&audience2=age%20%3E%2030%20AND%20sex%20%3D%202"
 {"percent": 0.282341350771364}
 ```
 

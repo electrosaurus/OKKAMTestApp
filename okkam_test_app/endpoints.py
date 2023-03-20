@@ -6,9 +6,8 @@ from core import audience_calculator, db_session
 
 async def get_percent(request: web.Request) -> web.Response:
     ''' Implements the `/getPercent` API method. '''
-    request_data = await request.json()
-    audience_1_condition = request_data.get('audience1')
-    audience_2_condition = request_data.get('audience2')
+    audience_1_condition = request.rel_url.query.get('audience1')
+    audience_2_condition = request.rel_url.query.get('audience2')
     if audience_1_condition is None or audience_2_condition is None:
         raise web.HTTPBadRequest(reason='Parameters `audience1` and `audience2` are required')
     try:
